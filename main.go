@@ -6,7 +6,7 @@ import (
 )
 
 func linty(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<img src='image/linty.jpeg'>")
+	fmt.Fprintf(w, "<img src='image/Linty6.jpg'>")
 }
 
 func main() {
