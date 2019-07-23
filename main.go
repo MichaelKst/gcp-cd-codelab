@@ -5,11 +5,12 @@ import (
 	"net/http"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "Hello World!")
+func linty(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<img src='image/linty.jpeg'>")
 }
 
 func main() {
-	http.HandleFunc("/", hello)
-	http.ListenAndServe(":80", nil)
+	http.HandleFunc("/", linty)
+	http.Handle("/image/", http.StripPrefix("/image/", http.FileServer(http.Dir("./image"))))
+	http.ListenAndServe(":5000", nil)
 }
