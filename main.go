@@ -11,6 +11,6 @@ func linty(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", linty)
-	http.Handle("/Linty6.jpg", http.FileServer(http.Dir("./image")))
+	http.Handle("/Linty6.jpg", http.FileServer(http.Dir("./image/Linty6.jpg")))
 	http.ListenAndServe(":5000", nil)
 }
