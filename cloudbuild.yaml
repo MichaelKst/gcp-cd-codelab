@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/MichaelKst/gcp-cd-codelab"]
     env: ["PROJECT_ROOT=github.com/MichaelKst/gcp-cd-codelab"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/ageless-aquifer-234408/gcp-cd-codelab:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/nimble-volt-255205/isclp2019:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/ageless-aquifer-234408/gcp-cd-codelab:$REVISION_ID"
+  - "gcr.io/nimble-volt-255205/isclp2019:$REVISION_ID"
